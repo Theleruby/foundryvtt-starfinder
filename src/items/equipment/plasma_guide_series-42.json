@@ -16,6 +16,7 @@
       "condition": "",
       "cost": null
     },
+    "ammunitionType": "charge",
     "area": {
       "effect": "",
       "shape": "",

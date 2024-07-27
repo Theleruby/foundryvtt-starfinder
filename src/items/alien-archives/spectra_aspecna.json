@@ -1,6 +1,6 @@
 {
   "_id": "eIZGneIcEva2KBH6",
-  "name": "Aspecna",
+  "name": "Spectra, Aspecna",
   "type": "npc2",
   "img": "icons/svg/mystery-man.svg",
   "items": [
@@ -1934,7 +1934,7 @@
     }
   ],
   "prototypeToken": {
-    "name": "Aspecna",
+    "name": "Spectra, Aspecna",
     "actorLink": false,
     "alpha": 1,
     "bar1": {

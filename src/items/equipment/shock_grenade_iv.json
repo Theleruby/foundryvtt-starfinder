@@ -218,7 +218,7 @@
     },
     "uses": {
       "max": 1,
-      "per": "",
+      "per": "charges",
       "value": 1
     },
     "weaponCategory": "shock",

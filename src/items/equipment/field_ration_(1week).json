@@ -1,10 +1,15 @@
 {
   "_id": "rAOula25Uqzzpsx1",
   "name": "Field Ration (1/Week)",
-  "type": "goods",
+  "type": "consumable",
   "img": "systems/sfrpg/icons/equipment/goods/field-ration.webp",
   "system": {
     "type": "",
+    "activation": {
+      "type": "none",
+      "condition": "",
+      "cost": 0
+    },
     "attuned": false,
     "bulk": "1",
     "damage": {

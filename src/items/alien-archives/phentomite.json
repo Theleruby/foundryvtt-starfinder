@@ -607,7 +607,7 @@
     "displayBars": 20,
     "displayName": 20,
     "disposition": -1,
-    "height": 2,
+    "height": 1,
     "light": {
       "alpha": 0.5,
       "angle": 360,
@@ -654,7 +654,7 @@
       "src": "icons/svg/mystery-man.svg",
       "tint": null
     },
-    "width": 2
+    "width": 1
   },
   "system": {
     "abilities": {
@@ -1151,7 +1151,7 @@
         "value": []
       },
       "senses": "darkvision 60 ft.",
-      "size": "large",
+      "size": "medium",
       "spellResistance": {
         "base": 0
       },

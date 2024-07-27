@@ -10,7 +10,7 @@
       "parts": []
     },
     "actionTarget": "",
-    "actionType": "",
+    "actionType": "rwak",
     "activation": {
       "type": "action",
       "condition": "",

@@ -2,6 +2,11 @@
   "_id": "R7McDL7nIUgtCja6",
   "name": "Scrap spikes, zero-edge",
   "type": "upgrade",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/environment/traps/trap-jaw-steel.webp",
   "system": {
     "type": "",

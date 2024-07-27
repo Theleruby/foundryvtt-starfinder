@@ -90,6 +90,7 @@
       "units": "",
       "value": "mire 1d4 rounds"
     },
+    "equippable": true,
     "equipped": false,
     "formula": "",
     "identified": true,

@@ -20,13 +20,13 @@
     "level": 1,
     "price": 1,
     "quantity": 1,
+    "source": "Core Rulebook",
     "uses": {
-      "value": 7,
+      "autoDestroy": true,
+      "autoUse": true,
       "max": "7",
       "per": "day",
-      "autoUse": true,
-      "autoDestroy": true
-    },
-    "source": "Core Rulebook"
+      "value": 7
+    }
   }
 }

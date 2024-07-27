@@ -83,7 +83,7 @@
       "units": "",
       "value": "Stunned 1 round"
     },
-    "equippable": false,
+    "equippable": true,
     "equipped": false,
     "formula": "",
     "identified": true,

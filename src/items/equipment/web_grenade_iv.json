@@ -90,6 +90,7 @@
       "units": "",
       "value": "mire 1 minute"
     },
+    "equippable": true,
     "equipped": false,
     "formula": "",
     "identified": true,

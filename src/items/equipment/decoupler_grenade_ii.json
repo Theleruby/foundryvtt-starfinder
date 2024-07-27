@@ -91,6 +91,7 @@
       "units": "",
       "value": "nanite cloud 1 minute"
     },
+    "equippable": true,
     "equipped": false,
     "formula": "",
     "identified": true,

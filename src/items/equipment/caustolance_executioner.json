@@ -101,7 +101,7 @@
       "units": "",
       "value": ""
     },
-    "equippable": false,
+    "equippable": true,
     "equipped": false,
     "formula": "",
     "identified": true,

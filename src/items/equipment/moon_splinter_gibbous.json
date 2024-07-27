@@ -112,7 +112,7 @@
       "units": "",
       "value": "polarize 1d6"
     },
-    "equippable": false,
+    "equippable": true,
     "equipped": false,
     "formula": "",
     "identified": true,

@@ -91,7 +91,7 @@
       "units": "",
       "value": ""
     },
-    "equippable": false,
+    "equippable": true,
     "equipped": false,
     "formula": "3d6",
     "identified": true,

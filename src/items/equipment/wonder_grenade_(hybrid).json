@@ -96,7 +96,7 @@
       "units": "minute",
       "value": "1"
     },
-    "equippable": false,
+    "equippable": true,
     "equipped": false,
     "formula": "",
     "identified": true,

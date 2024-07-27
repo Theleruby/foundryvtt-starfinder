@@ -90,6 +90,7 @@
       "units": "",
       "value": "staggered"
     },
+    "equippable": true,
     "equipped": false,
     "formula": "",
     "identified": true,

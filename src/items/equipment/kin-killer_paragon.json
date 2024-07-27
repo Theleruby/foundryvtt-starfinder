@@ -80,6 +80,7 @@
       "units": "",
       "value": ""
     },
+    "equippable": true,
     "equipped": false,
     "formula": "Sniper (1500 ft.)",
     "identified": true,

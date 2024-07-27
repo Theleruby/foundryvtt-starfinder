@@ -83,7 +83,7 @@
       "units": "",
       "value": ""
     },
-    "equippable": false,
+    "equippable": true,
     "equipped": false,
     "formula": "prone",
     "identified": true,

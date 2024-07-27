@@ -104,7 +104,7 @@
       "units": "",
       "value": ""
     },
-    "equippable": false,
+    "equippable": true,
     "equipped": false,
     "formula": "4d4",
     "identified": true,

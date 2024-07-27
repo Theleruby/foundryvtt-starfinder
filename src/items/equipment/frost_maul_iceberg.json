@@ -111,6 +111,7 @@
       "units": "",
       "value": ""
     },
+    "equippable": true,
     "equipped": false,
     "formula": "",
     "identified": false,

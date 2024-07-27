@@ -98,7 +98,7 @@
       "units": "round",
       "value": "3"
     },
-    "equippable": false,
+    "equippable": true,
     "equipped": false,
     "formula": "+5d6 Fire",
     "identified": true,

@@ -70,6 +70,7 @@
       "units": "",
       "value": ""
     },
+    "equippable": true,
     "equipped": false,
     "formula": "Wound",
     "identified": true,

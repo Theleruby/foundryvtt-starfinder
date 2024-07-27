@@ -9,7 +9,7 @@
     "abilityMods": {
       "parts": []
     },
-    "actionTarget": "",
+    "actionTarget": "ac5",
     "actionType": "rwak",
     "activation": {
       "type": "action",

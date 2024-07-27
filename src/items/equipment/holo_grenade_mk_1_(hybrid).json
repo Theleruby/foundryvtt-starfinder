@@ -12,9 +12,9 @@
     "actionTarget": "",
     "actionType": "rwak",
     "activation": {
-      "type": "none",
+      "type": "action",
       "condition": "",
-      "cost": null
+      "cost": 1
     },
     "ammunitionType": "",
     "area": {

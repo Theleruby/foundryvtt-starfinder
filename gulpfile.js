@@ -1403,11 +1403,11 @@ function consistencyCheck(allItems, compendiumMap) {
 
                 const linkParts = link.split('.');
                 // Skip links to journal entry pages
-                // @UUID[Compendium.sfrpg.some-pack.abcxyz.JournalEntryPage.abcxyz]
-                if (linkParts.length === 6) {
+                // @UUID[Compendium.sfrpg.some-pack(.JournalEntry).abcxyz.JournalEntryPage.abcxyz]
+                if (linkParts.length === 6 || linkParts.length === 7) {
                     continue;
                 }
-                if (linkParts.length !== 4) {
+                if (linkParts.length !== 4 && !(linkParts.length === 5 && ["Item", "Actor", "JournalEntry"].includes(linkParts[3]))) {
                     if (!(pack in packErrors)) {
                         packErrors[pack] = [];
                     }
@@ -1416,11 +1416,11 @@ function consistencyCheck(allItems, compendiumMap) {
                     continue;
                 }
 
-                // @UUID[Compendium.sfrpg.some-pack.abcxyz]
+                // @UUID[Compendium.sfrpg.some-pack(.Item|Actor|JournalEntry).abcxyz]
                 //      [0]         [1]   [2]       [3]
                 const system = linkParts[1];
                 const otherPack = linkParts[2];
-                const otherItemId = linkParts[3];
+                const otherItemId = linkParts.length === 5 ? linkParts[4] : linkParts[3];
 
                 // @UUID links must link to sfrpg compendiums.
                 if (system !== "sfrpg") {

@@ -30,7 +30,7 @@
     "attuned": false,
     "bulk": "1",
     "capacity": {
-      "max": 0,
+      "max": 20,
       "value": 0
     },
     "container": {
@@ -63,8 +63,8 @@
     "quantityPerPack": 1,
     "source": "SA:JD pg. 56",
     "usage": {
-      "per": "",
-      "value": 0
+      "per": "minute",
+      "value": 1
     }
   }
 }

@@ -1,8 +1,8 @@
 {
   "_id": "vX3ph7TVBVwo63bR",
-  "name": "Rubbish Cannon,Standard",
+  "name": "Rubbish Cannon, Standard",
   "type": "weapon",
-  "img": "systems/sfrpg/icons/equipment/weapons/nil-grenade-launcher-merc.jpg",
+  "img": "systems/sfrpg/icons/equipment/weapons/nil-grenade-launcher-merc.webp",
   "system": {
     "type": "",
     "ability": "dex",

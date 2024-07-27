@@ -1632,25 +1632,28 @@ export class ItemSFRPG extends Mix(Item).with(ItemActivationMixin, ItemCapacityM
         // Deduct consumed charges from the item
         if (itemData.uses.autoUse && !overrideUsage) {
             let quantity = itemData.quantity;
-            const remainingUses = this.getRemainingUses();
+            let remainingUses = this.getRemainingUses();
 
-            // Deduct an item quantity
-            if (remainingUses <= 1 && quantity >= 1) {
-                quantity -= 1;
-                this.update({
-                    'system.quantity': Math.max(quantity, 0),
-                    'system.uses.value': (quantity === 0) ? 0 : this.getMaxUses()
-                });
-            }
-
-            // Optionally destroy the item
-            else if (remainingUses <= 1 && quantity === 0 && itemData.uses.autoDestroy) {
-                this.actor.deleteEmbeddedDocuments("Item", [this.id]);
-            }
-
-            // Deduct the remaining charges
-            else {
-                this.update({'system.uses.value': Math.max(remainingUses - 1, 0) });
+            if (remainingUses > 1) {
+                // Deduct the remaining charges
+                remainingUses -= 1;
+                this.update({'system.uses.value': remainingUses});
+            } else {
+                // Deduct an item quantity
+                quantity = Math.max(quantity - 1, 0);
+                if (quantity < 1 && itemData.uses.autoDestroy) {
+                    // Destroy the item
+                    this.actor.deleteEmbeddedDocuments("Item", [this.id]);
+                } else {
+                  if (quantity > 0) {
+                    // Reset the remaining charges
+                    remainingUses = this.getMaxUses();
+                  }
+                  this.update({
+                      'system.quantity': quantity,
+                      'system.uses.value': remainingUses
+                  });
+                }
             }
         }
     }

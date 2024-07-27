@@ -1029,6 +1029,28 @@ export class ItemSFRPG extends Mix(Item).with(ItemActivationMixin, ItemCapacityM
         return modifiers;
     }
 
+    consumeCapacityFromUsage() {
+        const itemData = duplicate(this.system);
+        if (itemData.hasOwnProperty("usage")) {
+            const usage = itemData.usage;
+            if (usage.per) {
+                if (["round", "shot"].includes(usage.per)) {
+                    this.consumeCapacity(usage.value);
+                } else if (['minute'].includes(usage.per)) {
+                    if (game.combat) {
+                        Hooks.callAll("consumeCapacityMinute", {
+                            actor: this.actor,
+                            item: this,
+                            value: usage.value
+                        })
+                    } else {
+                        ui.notifications.info("You currently cannot deduct ammunition from weapons with a usage per minute outside of combat.");
+                    }
+                }
+            }
+        }
+    }
+
     /**
      * Handle updating item capacity when the attack dialog closes.
      *
@@ -1045,22 +1067,8 @@ export class ItemSFRPG extends Mix(Item).with(ItemActivationMixin, ItemCapacityM
             return;
         }
 
-        const itemData = duplicate(this.system);
-        if (itemData.hasOwnProperty("usage") && !options.disableDeductAmmo) {
-            const usage = itemData.usage;
-
-            if (usage.per && ["round", "shot"].includes(usage.per)) {
-                this.consumeCapacity(usage.value);
-            } else if (usage.per && ['minute'].includes(usage.per)) {
-                if (game.combat) {
-                    const round = game.combat.current.round || 0;
-                    if (round % 10 === 1) {
-                        this.consumeCapacity(usage.value);
-                    }
-                } else {
-                    ui.notifications.info("You currently cannot deduct ammunition from weapons with a usage per minute outside of combat.");
-                }
-            }
+        if (!options.disableDeductAmmo) {
+          this.consumeCapacityFromUsage()
         }
 
         Hooks.callAll("attackRolled", {actor: this.actor, item: this, roll: roll, formula: {base: formula, final: finalFormula}, rollMetadata: options?.rollMetadata});

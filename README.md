@@ -1,3 +1,18 @@
+This is my personal fork of the Starfinder system definition for Foundry Virtual Tabletop, as used in roleplaying sessions at The Ruby Palace. This version is forked from 0.26.1 (designed to work with Foundry v12).
+
+I don't really intend for anyone else to use this fork, and I don't provide any support for it. Nevertheless, if you really really really must adamantly use my fork instead of the official project, here's how you get it working:
+
+* You need a Foundry-compatible version of Node.js on PATH
+* Download and install sfrpg normally
+* Use your favourite git-compatible source control tool to pull down this repo
+* npm install
+* gulp cook
+* Delete everything in systems/sfrpg and copy the files from "dist" folder into it
+
+-Ruby
+
+---
+
 # Starfinder
 
 This is a game system definition of the Starfinder RPG for the awesome [Foundry Virtual Tabletop](http://foundryvtt.com/).

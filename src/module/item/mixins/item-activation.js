@@ -33,6 +33,11 @@ export const ItemActivationMixin = (superclass) => class extends superclass {
         return !!(itemData.isActive);
     }
 
+    shouldHaveActivationToggled() {
+        const itemData = this.system;
+        return Array.isArray(itemData.modifiers) && itemData.modifiers.length > 0;
+    }
+
     setActive(active) {
         // Only true and false are accepted.
         if (active !== true && active !== false) {
@@ -57,7 +62,7 @@ export const ItemActivationMixin = (superclass) => class extends superclass {
             updateData['system.uses.value'] = Math.max(0, remainingUses - 1);
         }
 
-        updateData['system.isActive'] = active;
+        updateData['system.isActive'] = this.shouldHaveActivationToggled() ? active : false;
 
         const updatePromise = this.update(updateData);
         const rollMode = game.settings.get("core", "rollMode");

@@ -1197,7 +1197,7 @@ function formattingCheckSpell(data, pack, file, options = { checkLinks: true }) 
         // Check references to conditions
         const conditionResult = searchDescriptionForUnlinkedReference(description, conditionsRegularExpression);
         if (conditionResult.found) {
-            for (const match of settingResult.foundWords) {
+            for (const match of conditionResult.foundWords) {
                 addWarningForPack(`${chalk.bold(file)}: Found reference to ${chalk.bold(match)} in description without link.`, pack);
             }
         }

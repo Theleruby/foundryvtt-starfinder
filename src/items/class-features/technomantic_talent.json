@@ -7,7 +7,7 @@
     "systemId": "sfrpg",
     "systemVersion": "0.26.1"
   },
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/sfrpg/icons/feats/technomantic_dabbler.webp",
   "system": {
     "type": "",
     "ability": null,

@@ -723,8 +723,7 @@ export class CombatSFRPG extends Combat {
                 flags: messageData.flags,
                 content: explainedRollContent,
                 rollMode: combatant.hidden && (rollMode === "roll") ? "gmroll" : rollMode,
-                roll: roll,
-                type: CONST.CHAT_MESSAGE_STYLES.ROLL,
+                rolls: [roll],
                 sound: CONFIG.sounds.dice
             };
 

@@ -230,6 +230,9 @@ export class DiceSFRPG {
             const finalFormula = await this._calcStackingFormula(node, rollMods, bonus, rollContext.allContexts[actorContextKey]?.entity);
 
             finalFormula.finalRoll = `${dieRoll} + ${finalFormula.finalRoll}`;
+            finalFormula.finalRoll = finalFormula.finalRoll.replace(/\+ -/gi, "- ").replace(/\+ \+/gi, "+ ")
+                .trim();
+            finalFormula.finalRoll = finalFormula.finalRoll.endsWith("+") ? finalFormula.finalRoll.substring(0, finalFormula.finalRoll.length - 1).trim() : finalFormula.finalRoll;
             finalFormula.formula = `${dieRoll} + ${finalFormula.formula}`;
             finalFormula.formula = finalFormula.formula.replace(/\+ -/gi, "- ").replace(/\+ \+/gi, "+ ")
                 .trim();
@@ -1079,6 +1082,11 @@ export class DiceSFRPG {
         const finalFormula = rootNode.resolveForRoll(0, rollMods);
 
         finalFormula.finalRoll = rollString ? `${finalFormula.finalRoll} + ${rollString}` : finalFormula.finalRoll;
+
+        finalFormula.finalRoll = finalFormula.finalRoll.replace(/\+ -/gi, "- ").replace(/\+ \+/gi, "+ ")
+            .trim();
+        finalFormula.finalRoll = finalFormula.finalRoll.endsWith("+") ? finalFormula.finalRoll.substring(0, finalFormula.finalRoll.length - 1).trim() : finalFormula.finalRoll;
+
         finalFormula.formula = formulaString ? `${finalFormula.formula} + ${formulaString}` : finalFormula.formula;
 
         finalFormula.formula = finalFormula.formula.replace(/\+ -/gi, "- ").replace(/\+ \+/gi, "+ ")

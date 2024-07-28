@@ -62,12 +62,13 @@ export const ItemActivationMixin = (superclass) => class extends superclass {
             updateData['system.uses.value'] = Math.max(0, remainingUses - 1);
         }
 
-        updateData['system.isActive'] = this.shouldHaveActivationToggled() ? active : false;
+        const shouldToggleActivation = this.shouldHaveActivationToggled();
+        updateData['system.isActive'] = shouldToggleActivation ? active : false;
 
         const updatePromise = this.update(updateData);
         const rollMode = game.settings.get("core", "rollMode");
 
-        if (active || this.system.duration.value || this.system.uses.max > 0) {
+        if (active || shouldToggleActivation || this.system.duration.value || this.system.uses.max > 0) {
             updatePromise.then(() => {
                 // Render the chat card template
                 const templateData = active

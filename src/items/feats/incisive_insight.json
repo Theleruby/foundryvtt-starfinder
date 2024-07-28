@@ -2,6 +2,11 @@
   "_id": "py2G9YIZyk44xzZn",
   "name": "Incisive Insight",
   "type": "feat",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "type": "",

@@ -2,6 +2,11 @@
   "_id": "GPRPndS18JIO7cwe",
   "name": "Parrying Technique (Combat)",
   "type": "feat",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "type": "",

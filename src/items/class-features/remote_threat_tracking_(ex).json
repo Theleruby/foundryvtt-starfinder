@@ -2,6 +2,11 @@
   "_id": "Hq62Gw3kkTRtcy4o",
   "name": "Remote Threat Tracking (Ex)",
   "type": "feat",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "type": "",

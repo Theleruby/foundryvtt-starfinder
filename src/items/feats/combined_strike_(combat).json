@@ -2,6 +2,11 @@
   "_id": "nlYeqKMfEfyQf4Y0",
   "name": "Combined Strike (Combat)",
   "type": "feat",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "type": "",

@@ -2,6 +2,11 @@
   "_id": "W3b3fG0zJrwLYdJ7",
   "name": "Steel Self",
   "type": "feat",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "type": "",

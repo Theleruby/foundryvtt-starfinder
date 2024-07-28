@@ -2,6 +2,11 @@
   "_id": "uovQ0gfZy060ktw0",
   "name": "Signature Support (Ex)",
   "type": "feat",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "type": "",

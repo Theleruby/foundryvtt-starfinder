@@ -2,6 +2,11 @@
   "_id": "liM2sOb64uE4aH1x",
   "name": "Arcane Riposte",
   "type": "feat",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/magic/defensive/shield-barrier-deflect-gold.webp",
   "system": {
     "type": "",

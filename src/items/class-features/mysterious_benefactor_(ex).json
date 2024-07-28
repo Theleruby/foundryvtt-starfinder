@@ -2,6 +2,11 @@
   "_id": "694I7riEDNVucab2",
   "name": "Mysterious Benefactor (Ex)",
   "type": "feat",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "type": "",

@@ -2,6 +2,11 @@
   "_id": "op70KBE0jOJeCicY",
   "name": "Technomantic Talent (Illusion)",
   "type": "feat",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "type": "",

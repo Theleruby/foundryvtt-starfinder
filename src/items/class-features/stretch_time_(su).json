@@ -2,6 +2,11 @@
   "_id": "PcnH5me4ykeGw2JH",
   "name": "Stretch Time (Su)",
   "type": "feat",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "type": "",

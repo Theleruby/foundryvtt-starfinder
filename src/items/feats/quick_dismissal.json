@@ -2,6 +2,11 @@
   "_id": "iYtmyyC9l7DmYj2O",
   "name": "Quick Dismissal",
   "type": "feat",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "type": "",

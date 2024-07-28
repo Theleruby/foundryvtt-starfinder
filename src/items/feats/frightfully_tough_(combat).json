@@ -2,6 +2,11 @@
   "_id": "ZJv6cAfxLCLrZDW6",
   "name": "Frightfully Tough (Combat)",
   "type": "feat",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "type": "",

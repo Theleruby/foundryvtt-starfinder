@@ -2,6 +2,11 @@
   "_id": "qwo43nA5s77BTDng",
   "name": "Devoted Healer",
   "type": "feat",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "type": "",

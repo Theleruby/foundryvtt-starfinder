@@ -2,6 +2,11 @@
   "_id": "IJbKt2kzRskHfS70",
   "name": "Stylish Nanites",
   "type": "feat",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "type": "",

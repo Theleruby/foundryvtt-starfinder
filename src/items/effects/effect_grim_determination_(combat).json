@@ -2,6 +2,11 @@
   "_id": "uyLbbMv6J65o9Ngu",
   "name": "Effect: Grim Determination (Combat)",
   "type": "effect",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "type": "effect",

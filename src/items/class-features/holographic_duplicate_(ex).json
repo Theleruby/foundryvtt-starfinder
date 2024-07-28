@@ -2,6 +2,11 @@
   "_id": "jiAJIHf1L5CfDyP8",
   "name": "Holographic Duplicate (Ex)",
   "type": "feat",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "type": "",

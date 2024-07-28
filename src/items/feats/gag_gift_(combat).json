@@ -2,6 +2,11 @@
   "_id": "zSx5T7kQyCbkm754",
   "name": "Gag Gift (Combat)",
   "type": "feat",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "type": "",

@@ -2,6 +2,11 @@
   "_id": "ieYTmEj49Us0XuF5",
   "name": "Feline Reflexes (Ex)",
   "type": "feat",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "type": "",

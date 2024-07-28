@@ -2,6 +2,11 @@
   "_id": "JrTKqdwan3nYp1WC",
   "name": "Infinite Worlds (Su) 2nd-level Spell Slots",
   "type": "spell",
+  "_stats": {
+    "coreVersion": 12,
+    "systemId": "sfrpg",
+    "systemVersion": "0.26.1"
+  },
   "img": "icons/svg/item-bag.svg",
   "system": {
     "type": "",

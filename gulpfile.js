@@ -1406,7 +1406,7 @@ function consistencyCheck(allItems, compendiumMap) {
                 const link = otherItem[1];
                 const otherItemName = otherItem[4] || link;
 
-                const linkParts = link.split('.');
+                const linkParts = link.split('#')[0].split('.');
                 // Skip links to journal entry pages
                 // @UUID[Compendium.sfrpg.some-pack(.JournalEntry).abcxyz.JournalEntryPage.abcxyz]
                 if (linkParts.length === 6 || linkParts.length === 7) {

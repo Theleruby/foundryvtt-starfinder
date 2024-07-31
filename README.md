@@ -15,7 +15,7 @@ I don't really intend for anyone else to use this fork, and I don't provide any 
 
 # Starfinder
 
-This is a game system definition of the Starfinder 1st edition RPG for the awesome [Foundry Virtual Tabletop](http://foundryvtt.com/).
+This is a game system definition of the Starfinder First Edition RPG for the awesome [Foundry Virtual Tabletop](http://foundryvtt.com/).
 
 ## Join the discussion
 

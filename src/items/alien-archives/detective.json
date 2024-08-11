@@ -1705,7 +1705,7 @@
             "max": 24,
             "modifier": "3d8",
             "modifierType": "formula",
-            "notes": "Apply if Trick Attack skill check was succesful.",
+            "notes": "Apply if Trick Attack skill check was successful.",
             "source": "",
             "subtab": "misc",
             "valueAffected": "operative"
@@ -1720,7 +1720,7 @@
             "max": 24,
             "modifier": "3d8",
             "modifierType": "formula",
-            "notes": "Apply if Trick Attack skill check was succesful.",
+            "notes": "Apply if Trick Attack skill check was successful.",
             "source": "",
             "subtab": "misc",
             "valueAffected": "smallA"

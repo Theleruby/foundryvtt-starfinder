@@ -18,6 +18,10 @@ Foundry v12. This is tested to work correctly on v12.330.
 * Adding icons and artwork to most things which currently don't have any (this may end up in a private extension module to avoid copyright issues)
 * Extending the system to support third-party OGL products that I own
 
+## Current status
+
+This version is now largely frozen for the time being, because our campaign is currently underway, and I don't want to accidentally break everything and disrupt the sessions.
+
 ## Support
 
 I don't really intend for anyone else to use this fork, and I don't provide any support for it. My primary priority is just for me and my friends to play Starfinder and to have a good time.

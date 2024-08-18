@@ -26,6 +26,10 @@
       "unidentified": "",
       "value": "<p><strong>Usage:</strong> 1 / week</p>\n<p>A field ration is prepackaged food that can easily sustain you but lacks flavor and visual appeal. Field rations generally consist of chewy, brownish blocks of processed nutrients, which contain enough moisture to provide a day’s worth of water intake. While it is possible to survive for weeks on nothing but field rations, it’s not a pleasant experience.</p>"
     },
+    "duration": {
+      "units": "day",
+      "value": "1"
+    },
     "equipped": false,
     "identified": true,
     "level": 1,
@@ -36,7 +40,7 @@
       "autoDestroy": true,
       "autoUse": true,
       "max": "7",
-      "per": "day",
+      "per": "charges",
       "value": 7
     }
   }

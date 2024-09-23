@@ -661,7 +661,7 @@ export class ItemSFRPG extends Mix(Item).with(ItemActivationMixin, ItemCapacityM
      */
     _questChatData(data, labels, props) {
         props.push(
-            {name: CONFIG.SFRPG.itemTypes["quest"], tooltip: null},
+            {name: game.i18n.localize("TYPES.Item.quest"), tooltip: null},
             data.bulk ? {name: `${game.i18n.localize("SFRPG.InventoryBulk")} ${data.bulk}`, tooltip: null} : null
         );
     }

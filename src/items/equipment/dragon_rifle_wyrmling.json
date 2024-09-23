@@ -24,10 +24,9 @@
     "ammunitionType": "fuel",
     "area": {
       "effect": "",
-      "shapable": false,
       "shape": "",
-      "units": "ft",
-      "value": ""
+      "units": "none",
+      "value": null
     },
     "attackBonus": 0,
     "attributes": {
@@ -43,7 +42,7 @@
       },
       "hp": {
         "max": "",
-        "value": 30
+        "value": 6
       },
       "size": "medium",
       "sturdy": true
@@ -54,7 +53,7 @@
       "max": 20,
       "value": 20
     },
-    "chatFlavor": "",
+    "chatFlavor": "Automatic",
     "container": {
       "contents": [],
       "includeContentsInWealthCalculation": true,
@@ -79,17 +78,6 @@
           "amount": 1,
           "subtype": "ammunitionSlot",
           "weightProperty": ""
-        },
-        {
-          "type": "slot",
-          "acceptsType": [
-            "weaponAccessory"
-          ],
-          "affectsEncumbrance": true,
-          "amount": 4,
-          "subtype": "",
-          "weightMultiplier": 1,
-          "weightProperty": ""
         }
       ]
     },
@@ -102,8 +90,6 @@
         {
           "name": "",
           "formula": "1d8",
-          "group": null,
-          "isPrimarySection": true,
           "types": {
             "acid": false,
             "bludgeoning": false,
@@ -116,8 +102,7 @@
             "sonic": false
           }
         }
-      ],
-      "primaryGroup": null
+      ]
     },
     "damageNotes": "",
     "description": {
@@ -129,10 +114,10 @@
     },
     "descriptors": [],
     "duration": {
-      "units": "text",
+      "units": "",
       "value": ""
     },
-    "equippable": true,
+    "equippable": false,
     "equipped": false,
     "formula": "",
     "identified": true,
@@ -179,14 +164,11 @@
       "gravitation": false,
       "guided": false,
       "harrying": false,
-      "healing": false,
       "holyWater": false,
       "hybrid": false,
-      "hydrodynamic": false,
       "ignite": false,
       "indirect": false,
       "injection": false,
-      "instrumental": false,
       "integrated": false,
       "line": false,
       "living": false,
@@ -243,7 +225,7 @@
       "additional": "",
       "per": "",
       "units": "ft",
-      "value": "60"
+      "value": 60
     },
     "rollNotes": "",
     "save": {
@@ -251,11 +233,7 @@
       "dc": "",
       "descriptor": "negate"
     },
-    "skillCheck": {
-      "type": "",
-      "dc": ""
-    },
-    "source": "AR pg. 37",
+    "source": "ARM pg. 17",
     "special": "",
     "specialMaterials": {
       "abysium": false,
@@ -282,9 +260,9 @@
       "value": 1
     },
     "uses": {
-      "max": "",
+      "max": 0,
       "per": "",
-      "value": null
+      "value": 1
     },
     "weaponCategory": "flame",
     "weaponType": "longA"

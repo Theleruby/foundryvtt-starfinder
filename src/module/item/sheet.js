@@ -402,7 +402,7 @@ export class ItemSheetSFRPG extends ItemSheet {
                     tooltip: CONFIG.SFRPG.weaponPropertiesTooltips[e[0]]
                 })),
             {title: game.i18n.localize("SFRPG.Items.Activation.RangeIncrement"), name: labels.range, tooltip: null},
-            {title: game.i18n.localize("SFRPG.Items.Activation.AltRangeIncrement"), name: labels.altRange, tooltip: null}
+            (itemData.altRange?.units ?? "none") !== "none" ? {title: game.i18n.localize("SFRPG.Items.Activation.AltRangeIncrement"), name: labels.altRange, tooltip: null} : null
             );
         } else if (item.type === "spell") {
             const desc = (Object.entries(itemData.descriptors)).filter(e => e[1] === true)

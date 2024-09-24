@@ -80,7 +80,7 @@ export default function(engine) {
              */
             {
 
-                const altRangeType = data.altRange.units;
+                const altRangeType = data.altRange?.units ?? "none";
 
                 if (["close", "medium", "long"].includes(altRangeType)) {
                     let altRangeValue = 0;

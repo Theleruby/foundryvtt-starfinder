@@ -516,7 +516,7 @@ export class ItemSheetSFRPG extends ItemSheet {
                 {title: game.i18n.localize("SFRPG.Items.Activation.Activation"), name: labels.activation, tooltip: null},
                 {title: game.i18n.localize("SFRPG.Items.Activation.Target"), name: labels.target, tooltip: null},
                 itemData.range.units !== "none" ? {title: game.i18n.localize("SFRPG.Items.Activation.Range"), name: labels.range, tooltip: rangeTooltip} : null,
-                itemData.altRange.units !== "none" ? {title: game.i18n.localize("SFRPG.Items.Activation.AltRange"), name: labels.altRange, tooltip: altRangeTooltip} : null,
+                (itemData.altRange?.units ?? "none") !== "none" ? {title: game.i18n.localize("SFRPG.Items.Activation.AltRange"), name: labels.altRange, tooltip: altRangeTooltip} : null,
                 (itemData.area.value || itemData.area.total)
                     ? {title: game.i18n.localize("SFRPG.Items.Activation.Area"), name: labels.area, tooltip: null}
                     : null,

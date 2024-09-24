@@ -207,14 +207,14 @@ export class ItemSheetSFRPG extends ItemSheet {
                 else return !(["none", "personal", "touch", "planetary", "system", "plane", "unlimited"].includes(itemData.range.units));
             })();
             data.range.showTotal = !!itemData.range?.total && (String(itemData.range?.total) !== String(itemData.range?.value));
-            
+
             data.altRange = {};
 
             data.altRange.hasInput = (() => {
                 // C/M/L on spells requires no input
-                if (this.item.type === "spell") return !(["close", "medium", "long", "none", "personal", "touch", "planetary", "system", "plane", "unlimited"].includes(itemData.altRange.units));
+                if (this.item.type === "spell") return !(["close", "medium", "long", "none", "personal", "touch", "planetary", "system", "plane", "unlimited"].includes(itemData.altRange?.units));
                 // These ranges require no input
-                else return !(["none", "personal", "touch", "planetary", "system", "plane", "unlimited"].includes(itemData.altRange.units));
+                else return !(["none", "personal", "touch", "planetary", "system", "plane", "unlimited"].includes(itemData.altRange?.units));
             })();
             data.altRange.showTotal = !!itemData.altRange?.total && (String(itemData.altRange?.total) !== String(itemData.altRange?.value));
 

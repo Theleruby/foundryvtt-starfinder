@@ -51,7 +51,7 @@
     "bulk": "2",
     "capacity": {
       "max": 50,
-      "value": 50
+      "value": 0
     },
     "chatFlavor": "Unwieldy",
     "container": {

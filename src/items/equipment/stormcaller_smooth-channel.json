@@ -51,7 +51,7 @@
     "bulk": "2",
     "capacity": {
       "max": 40,
-      "value": 40
+      "value": 0
     },
     "chatFlavor": "Flexible line, living, unwieldy",
     "container": {
@@ -230,7 +230,7 @@
       "value": ""
     },
     "usage": {
-      "per": "Battery charge",
+      "per": "shot",
       "value": 5
     },
     "uses": {

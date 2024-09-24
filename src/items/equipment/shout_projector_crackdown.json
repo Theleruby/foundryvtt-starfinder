@@ -51,7 +51,7 @@
     "bulk": "2",
     "capacity": {
       "max": 80,
-      "value": 80
+      "value": 0
     },
     "chatFlavor": "Explode (20 ft.), integrated (4 slots), stun, unwieldy",
     "container": {

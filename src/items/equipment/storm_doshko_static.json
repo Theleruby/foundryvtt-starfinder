@@ -21,6 +21,7 @@
       "condition": "",
       "cost": null
     },
+    "ammunitionType": "charge",
     "area": {
       "effect": "",
       "shape": "",
@@ -32,7 +33,7 @@
     "bulk": "1",
     "capacity": {
       "max": 20,
-      "value": 20
+      "value": 0
     },
     "chatFlavor": "",
     "container": {
@@ -143,7 +144,7 @@
       "value": ""
     },
     "usage": {
-      "per": "charge",
+      "per": "minute",
       "value": 1
     },
     "uses": {

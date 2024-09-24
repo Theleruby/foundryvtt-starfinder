@@ -37,7 +37,7 @@
     "bulk": "2",
     "capacity": {
       "max": 100,
-      "value": 100
+      "value": 0
     },
     "chatFlavor": "Guided, sniper (1,000 ft.), unwieldy",
     "container": {
@@ -202,7 +202,7 @@
       "value": ""
     },
     "usage": {
-      "per": "Battery charge",
+      "per": "shot",
       "value": 10
     },
     "uses": {

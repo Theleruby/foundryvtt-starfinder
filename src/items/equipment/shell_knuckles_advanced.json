@@ -21,6 +21,7 @@
       "condition": "",
       "cost": null
     },
+    "ammunitionType": "shell",
     "area": {
       "effect": "",
       "shape": "",
@@ -50,7 +51,7 @@
     "bulk": "L",
     "capacity": {
       "max": 2,
-      "value": 2
+      "value": 0
     },
     "chatFlavor": "",
     "container": {

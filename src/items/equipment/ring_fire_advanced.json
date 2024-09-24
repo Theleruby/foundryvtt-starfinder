@@ -51,7 +51,7 @@
     "bulk": "0",
     "capacity": {
       "max": 1,
-      "value": null
+      "value": 0
     },
     "chatFlavor": "",
     "container": {

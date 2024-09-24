@@ -51,7 +51,7 @@
     "bulk": "2",
     "capacity": {
       "max": 20,
-      "value": 20
+      "value": 0
     },
     "chatFlavor": "professional (miner), modal (cryo)",
     "container": {
@@ -266,7 +266,7 @@
     },
     "usage": {
       "per": "shot",
-      "value": 1
+      "value": 2
     },
     "uses": {
       "max": null,

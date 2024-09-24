@@ -51,7 +51,7 @@
     "bulk": "L",
     "capacity": {
       "max": 40,
-      "value": 40
+      "value": 0
     },
     "chatFlavor": "Boost 2d6, relic",
     "container": {
@@ -231,7 +231,7 @@
     },
     "usage": {
       "per": "shot",
-      "value": 8
+      "value": 4
     },
     "uses": {
       "max": 0,

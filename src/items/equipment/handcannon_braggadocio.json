@@ -50,8 +50,8 @@
     "attuned": false,
     "bulk": "1",
     "capacity": {
-      "max": 8,
-      "value": 8
+      "max": 9,
+      "value": 0
     },
     "chatFlavor": "",
     "container": {

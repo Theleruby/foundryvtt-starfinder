@@ -22,6 +22,7 @@
       "units": "ft",
       "value": "750"
     },
+    "ammunitionType": "charge",
     "area": {
       "effect": "",
       "shape": "",
@@ -33,7 +34,7 @@
     "bulk": "1",
     "capacity": {
       "max": 40,
-      "value": 40
+      "value": 0
     },
     "chatFlavor": "",
     "container": {
@@ -142,7 +143,7 @@
       "value": ""
     },
     "usage": {
-      "per": "round",
+      "per": "shot",
       "value": 8
     },
     "uses": {

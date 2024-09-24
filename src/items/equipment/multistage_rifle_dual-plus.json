@@ -25,6 +25,7 @@
       "units": "ft",
       "value": "500"
     },
+    "ammunitionType": "rocket",
     "area": {
       "effect": "",
       "shape": "",
@@ -36,7 +37,7 @@
     "bulk": "2",
     "capacity": {
       "max": 2,
-      "value": 2
+      "value": 0
     },
     "chatFlavor": "Indirect, sniper (500 ft.), unwieldy",
     "container": {
@@ -206,7 +207,7 @@
       "value": ""
     },
     "usage": {
-      "per": "Mini-rockets",
+      "per": "shot",
       "value": 2
     },
     "uses": {

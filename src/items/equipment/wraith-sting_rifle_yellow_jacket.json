@@ -22,6 +22,7 @@
       "units": "ft",
       "value": "250"
     },
+    "ammunitionType": "dart",
     "area": {
       "effect": "",
       "shape": "",
@@ -33,7 +34,7 @@
     "bulk": "1",
     "capacity": {
       "max": 1,
-      "value": 1
+      "value": 0
     },
     "chatFlavor": "",
     "container": {
@@ -142,7 +143,7 @@
       "value": ""
     },
     "usage": {
-      "per": "round",
+      "per": "shot",
       "value": 1
     },
     "uses": {

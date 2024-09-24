@@ -31,8 +31,8 @@
     "attuned": false,
     "bulk": "L",
     "capacity": {
-      "max": null,
-      "value": null
+      "max": 0,
+      "value": 0
     },
     "chatFlavor": "Grapple, injection, reach",
     "container": {
@@ -187,7 +187,7 @@
     },
     "usage": {
       "per": "",
-      "value": null
+      "value": 0
     },
     "uses": {
       "max": 0,

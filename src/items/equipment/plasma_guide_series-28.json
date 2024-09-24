@@ -37,7 +37,7 @@
     "bulk": "2",
     "capacity": {
       "max": 40,
-      "value": 40
+      "value": 0
     },
     "chatFlavor": "Guided, sniper (250 ft.), unwieldy",
     "container": {

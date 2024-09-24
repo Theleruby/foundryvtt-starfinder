@@ -51,7 +51,7 @@
     "bulk": "3",
     "capacity": {
       "max": 20,
-      "value": 20
+      "value": 0
     },
     "chatFlavor": "Antibiological",
     "container": {
@@ -225,7 +225,7 @@
     },
     "usage": {
       "per": "shot",
-      "value": 1
+      "value": 4
     },
     "uses": {
       "max": 0,

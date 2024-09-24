@@ -51,7 +51,7 @@
     "bulk": "2",
     "capacity": {
       "max": 20,
-      "value": 20
+      "value": 0
     },
     "chatFlavor": "Blast, shape 1, unwieldy",
     "container": {
@@ -231,7 +231,7 @@
       "value": ""
     },
     "usage": {
-      "per": "Battery charge",
+      "per": "shot",
       "value": 2
     },
     "uses": {

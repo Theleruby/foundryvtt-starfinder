@@ -55,7 +55,7 @@
     "bulk": "2",
     "capacity": {
       "max": 20,
-      "value": 20
+      "value": 0
     },
     "chatFlavor": "Snipe (500 ft.)",
     "container": {

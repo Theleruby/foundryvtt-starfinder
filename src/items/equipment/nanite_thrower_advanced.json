@@ -51,7 +51,7 @@
     "bulk": "1",
     "capacity": {
       "max": 10,
-      "value": 10
+      "value": 0
     },
     "chatFlavor": "Deconstruct 3d6",
     "container": {

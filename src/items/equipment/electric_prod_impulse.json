@@ -21,6 +21,7 @@
       "condition": "",
       "cost": null
     },
+    "ammunitionType": "charge",
     "area": {
       "effect": "",
       "shape": "",
@@ -50,7 +51,7 @@
     "bulk": "1",
     "capacity": {
       "max": 20,
-      "value": 20
+      "value": 0
     },
     "chatFlavor": "Powered, nonlethal, professional (farmer)",
     "container": {
@@ -219,7 +220,7 @@
       "value": ""
     },
     "usage": {
-      "per": "shot",
+      "per": "minute",
       "value": 1
     },
     "uses": {

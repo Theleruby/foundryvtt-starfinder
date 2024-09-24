@@ -25,6 +25,7 @@
       "units": "ft",
       "value": "500"
     },
+    "ammunitionType": "nanite",
     "area": {
       "effect": "",
       "shape": "",
@@ -36,7 +37,7 @@
     "bulk": "2",
     "capacity": {
       "max": 10,
-      "value": 10
+      "value": 0
     },
     "chatFlavor": "Sniper (500 ft.), unwieldy",
     "container": {

@@ -51,7 +51,7 @@
     "bulk": "",
     "capacity": {
       "max": 1,
-      "value": 1
+      "value": 0
     },
     "chatFlavor": "Conceal, punch gun",
     "container": {

@@ -25,6 +25,7 @@
       "units": "ft",
       "value": "1000"
     },
+    "ammunitionType": "rocket",
     "area": {
       "effect": "",
       "shape": "",
@@ -36,7 +37,7 @@
     "bulk": "2",
     "capacity": {
       "max": 4,
-      "value": 4
+      "value": 0
     },
     "chatFlavor": "Indirect, sniper (1,000 ft.), unwieldy",
     "container": {

@@ -50,8 +50,8 @@
     "attuned": false,
     "bulk": "2",
     "capacity": {
-      "max": 50,
-      "value": 50
+      "max": 100,
+      "value": 0
     },
     "chatFlavor": "Line, necrotic",
     "container": {
@@ -230,8 +230,8 @@
       "value": ""
     },
     "usage": {
-      "per": "Battery charge",
-      "value": 5
+      "per": "shot",
+      "value": 10
     },
     "uses": {
       "max": 0,

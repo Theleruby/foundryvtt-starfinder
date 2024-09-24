@@ -51,7 +51,7 @@
     "bulk": "2",
     "capacity": {
       "max": 80,
-      "value": 80
+      "value": 0
     },
     "chatFlavor": "Penetrating, professional (miner)",
     "container": {

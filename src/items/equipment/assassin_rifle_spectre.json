@@ -25,6 +25,7 @@
       "units": "ft",
       "value": "750"
     },
+    "ammunitionType": "roundL",
     "area": {
       "effect": "",
       "shape": "",
@@ -36,7 +37,7 @@
     "bulk": "1",
     "capacity": {
       "max": 1,
-      "value": 1
+      "value": 0
     },
     "chatFlavor": "Breakdown, sniper (750 ft.), unwieldy",
     "container": {

@@ -52,7 +52,7 @@
     "bulk": "L",
     "capacity": {
       "max": 80,
-      "value": 80
+      "value": 0
     },
     "chatFlavor": "",
     "container": {

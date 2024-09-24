@@ -50,8 +50,8 @@
     "attuned": false,
     "bulk": "2",
     "capacity": {
-      "max": 20,
-      "value": 20
+      "max": 80,
+      "value": 0
     },
     "chatFlavor": "Antibiological",
     "container": {
@@ -225,7 +225,7 @@
     },
     "usage": {
       "per": "shot",
-      "value": 1
+      "value": 5
     },
     "uses": {
       "max": 0,

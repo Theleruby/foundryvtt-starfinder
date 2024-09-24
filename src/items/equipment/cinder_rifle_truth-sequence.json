@@ -51,7 +51,7 @@
     "bulk": "2",
     "capacity": {
       "max": 10,
-      "value": 10
+      "value": 0
     },
     "chatFlavor": "",
     "container": {
@@ -232,7 +232,7 @@
       "value": ""
     },
     "usage": {
-      "per": "Rounds",
+      "per": "shot",
       "value": 1
     },
     "uses": {

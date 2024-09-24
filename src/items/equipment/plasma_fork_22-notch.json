@@ -51,7 +51,7 @@
     "bulk": "1",
     "capacity": {
       "max": 40,
-      "value": 40
+      "value": 0
     },
     "chatFlavor": "Boost 3d10",
     "container": {

@@ -51,7 +51,7 @@
     "bulk": "2",
     "capacity": {
       "max": 20,
-      "value": 20
+      "value": 0
     },
     "chatFlavor": "Automatic",
     "container": {
@@ -233,7 +233,7 @@
     },
     "usage": {
       "per": "shot",
-      "value": 2
+      "value": 1
     },
     "uses": {
       "max": 0,

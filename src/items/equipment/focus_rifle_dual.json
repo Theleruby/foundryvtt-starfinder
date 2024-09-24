@@ -25,6 +25,7 @@
       "units": "ft",
       "value": "500"
     },
+    "ammunitionType": "charge",
     "area": {
       "effect": "",
       "shape": "",
@@ -36,7 +37,7 @@
     "bulk": "1",
     "capacity": {
       "max": 20,
-      "value": 20
+      "value": 0
     },
     "chatFlavor": "Penetrating, sniper (500 ft.), unwieldy",
     "container": {

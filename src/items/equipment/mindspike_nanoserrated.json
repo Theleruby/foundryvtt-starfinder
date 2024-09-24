@@ -31,8 +31,8 @@
     "attuned": false,
     "bulk": "L",
     "capacity": {
-      "max": null,
-      "value": null
+      "max": 0,
+      "value": 0
     },
     "chatFlavor": "Analog",
     "container": {
@@ -193,7 +193,7 @@
     },
     "usage": {
       "per": "",
-      "value": null
+      "value": 0
     },
     "uses": {
       "max": 0,

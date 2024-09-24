@@ -212,9 +212,9 @@ export class ItemSheetSFRPG extends ItemSheet {
 
             data.altRange.hasInput = (() => {
                 // C/M/L on spells requires no input
-                if (this.item.type === "spell") return !(["close", "medium", "long", "none", "personal", "touch", "planetary", "system", "plane", "unlimited"].includes(itemData.altRange?.units));
+                if (this.item.type === "spell") return !(["close", "medium", "long", "none", "personal", "touch", "planetary", "system", "plane", "unlimited"].includes(itemData.altRange?.units ?? "none"));
                 // These ranges require no input
-                else return !(["none", "personal", "touch", "planetary", "system", "plane", "unlimited"].includes(itemData.altRange?.units));
+                else return !(["none", "personal", "touch", "planetary", "system", "plane", "unlimited"].includes(itemData.altRange?.units ?? "none"));
             })();
             data.altRange.showTotal = !!itemData.altRange?.total && (String(itemData.altRange?.total) !== String(itemData.altRange?.value));
 

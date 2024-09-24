@@ -207,6 +207,16 @@ export class ItemSheetSFRPG extends ItemSheet {
                 else return !(["none", "personal", "touch", "planetary", "system", "plane", "unlimited"].includes(itemData.range.units));
             })();
             data.range.showTotal = !!itemData.range?.total && (String(itemData.range?.total) !== String(itemData.range?.value));
+            
+            data.altRange = {};
+
+            data.altRange.hasInput = (() => {
+                // C/M/L on spells requires no input
+                if (this.item.type === "spell") return !(["close", "medium", "long", "none", "personal", "touch", "planetary", "system", "plane", "unlimited"].includes(itemData.altRange.units));
+                // These ranges require no input
+                else return !(["none", "personal", "touch", "planetary", "system", "plane", "unlimited"].includes(itemData.altRange.units));
+            })();
+            data.altRange.showTotal = !!itemData.altRange?.total && (String(itemData.altRange?.total) !== String(itemData.altRange?.value));
 
             data.area = {};
             data.area.showTotal = !!itemData.area?.total && (String(itemData.area?.total) !== String(itemData.area?.value));
@@ -391,7 +401,8 @@ export class ItemSheetSFRPG extends ItemSheet {
                     name: CONFIG.SFRPG.weaponProperties[e[0]],
                     tooltip: CONFIG.SFRPG.weaponPropertiesTooltips[e[0]]
                 })),
-            {title: game.i18n.localize("SFRPG.Items.Activation.RangeIncrement"), name: labels.range, tooltip: null}
+            {title: game.i18n.localize("SFRPG.Items.Activation.RangeIncrement"), name: labels.range, tooltip: null},
+            {title: game.i18n.localize("SFRPG.Items.Activation.AltRangeIncrement"), name: labels.altRange, tooltip: null}
             );
         } else if (item.type === "spell") {
             const desc = (Object.entries(itemData.descriptors)).filter(e => e[1] === true)
@@ -498,10 +509,14 @@ export class ItemSheetSFRPG extends ItemSheet {
             const rangeTooltip = ["close", "medium", "long"].includes(itemData?.range?.units)
                 ? game.i18n.format(`SFRPG.Range${itemData?.range?.units?.capitalize()}`)
                 : null;
+            const altRangeTooltip = ["close", "medium", "long"].includes(itemData?.altRange?.units)
+                ? game.i18n.format(`SFRPG.AltRange${itemData?.altRange?.units?.capitalize()}`)
+                : null;
             props.push(
                 {title: game.i18n.localize("SFRPG.Items.Activation.Activation"), name: labels.activation, tooltip: null},
                 {title: game.i18n.localize("SFRPG.Items.Activation.Target"), name: labels.target, tooltip: null},
                 itemData.range.units !== "none" ? {title: game.i18n.localize("SFRPG.Items.Activation.Range"), name: labels.range, tooltip: rangeTooltip} : null,
+                itemData.altRange.units !== "none" ? {title: game.i18n.localize("SFRPG.Items.Activation.AltRange"), name: labels.altRange, tooltip: altRangeTooltip} : null,
                 (itemData.area.value || itemData.area.total)
                     ? {title: game.i18n.localize("SFRPG.Items.Activation.Area"), name: labels.area, tooltip: null}
                     : null,

@@ -1547,6 +1547,8 @@
                 "Activation": "Activation",
                 "ActivationCondition": "Condizioni di Attivazione",
                 "ActivationCost": "Costo di Attivazione",
+                "AltRange": "Alt Range",
+                "AltRangeIncrement": "Alt Range Increment",
                 "Area": "Area",
                 "Duration": "Durata",
                 "LimitedUses": "Utilizzi Limitati",
@@ -1554,6 +1556,7 @@
                 "RangeIncrement": "Range Increment",
                 "Target": "Bersaglio"
             },
+            "AltRangeInformation": "Alt Range Information",
             "Ammunition": {
                 "Ammo": "Ammo",
                 "AmmunitionType": "Ammunition Type",

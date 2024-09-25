@@ -50,7 +50,7 @@
     "attuned": false,
     "bulk": "2",
     "capacity": {
-      "max": 100,
+      "max": 80,
       "value": 0
     },
     "chatFlavor": "Line, necrotic",
@@ -231,7 +231,7 @@
     },
     "usage": {
       "per": "shot",
-      "value": 10
+      "value": 8
     },
     "uses": {
       "max": 0,

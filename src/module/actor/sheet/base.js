@@ -465,8 +465,15 @@ export class ActorSheetSFRPG extends ActorSheet {
     static getDamageString(item) {
         try {
             const isWeapon = ["weapon", "shield"].includes(item.type);
-            const formula = item.system.damage.parts[0].formula;
+            let formula = item.system.damage.parts[0].formula;
             if (!formula) throw ("No damage formula, deferring to default string");
+
+            // if this is an NPC we need to add the NPC damage
+            if (item.actor.type === "npc2" && item.type === "weapon" && ["mwak", "rwak"].includes(item.system.actionType)) {
+              let npcDamageBonusType = item.system.weaponType;
+              if (!npcDamageBonusType) npcDamageBonusType = "base";
+              formula = formula + ` + @npcBonus.${npcDamageBonusType}.damage.mod`;
+            }
 
             let appropriateMods = item.getAppropriateDamageModifiers(isWeapon);
             // Remove situational modifiers

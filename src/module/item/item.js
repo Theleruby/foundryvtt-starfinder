@@ -1300,6 +1300,13 @@ export class ItemSFRPG extends Mix(Item).with(ItemActivationMixin, ItemCapacityM
             part.isDamageSection = true;
         }
 
+        // Add NPC damage bonus to part 0
+        if (this.actor.type === "npc2" && this.type === "weapon" && ["mwak", "rwak"].includes(itemData.actionType) && parts.length > 0) {
+          let npcDamageBonusType = itemData.weaponType;
+          if (!npcDamageBonusType) npcDamageBonusType = "base";
+          parts[0].formula = parts[0].formula + ` + @npcBonus.${npcDamageBonusType}.damage.mod`;
+        }
+
         let modifiers = this.getAppropriateDamageModifiers(isWeapon);
 
         const stackModifiers = new StackModifiers();

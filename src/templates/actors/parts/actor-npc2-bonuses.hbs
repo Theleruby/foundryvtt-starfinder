@@ -18,12 +18,12 @@
 					{{ localize "SFRPG.ActorSheet.Bonuses.Base" }}
 				</label>
 				<div class="form-fields">
-					<input type="text" name="system.npcBonus.base.attack.value" value="{{system.npcBonus.base.attack.value}}" data-dtype="Number" />
-					<p>{{numberFormat system.npcBonus.base.attack.mod decimals=0 sign=true}}</p>
+					<input type="text" name="system.npcBonus.base.attack.value" value="{{system.npcBonus.base.attack.value}}" data-tooltip="@npcBonus.base.attack.value" data-dtype="Number" />
+					<p data-tooltip="@npcBonus.base.attack.mod">{{numberFormat system.npcBonus.base.attack.mod decimals=0 sign=true}}</p>
 				</div>
 				<div class="form-fields">
-					<input type="text" name="system.npcBonus.base.damage.value" value="{{system.npcBonus.base.damage.value}}" data-dtype="Number" />
-					<p>{{numberFormat system.npcBonus.base.damage.mod decimals=0 sign=true}}</p>
+					<input type="text" name="system.npcBonus.base.damage.value" value="{{system.npcBonus.base.damage.value}}" data-tooltip="@npcBonus.base.damage.value" data-dtype="Number" />
+					<p data-tooltip="@npcBonus.base.damage.mod">{{numberFormat system.npcBonus.base.damage.mod decimals=0 sign=true}}</p>
 				</div>
 			</div>
 			<hr/>
@@ -33,12 +33,12 @@
 					{{bonus.label}}
 				</label>
 				<div class="form-fields">
-					<input type="text" name="system.npcBonus.{{type}}.attack.value" value="{{bonus.attack.value}}" data-dtype="Number" />
-					<p>{{numberFormat bonus.attack.mod decimals=0 sign=true}}</p>
+					<input type="text" name="system.npcBonus.{{type}}.attack.value" value="{{bonus.attack.value}}" data-tooltip="@npcBonus.{{type}}.attack.value" data-dtype="Number" />
+					<p data-tooltip="@npcBonus.{{type}}.attack.mod">{{numberFormat bonus.attack.mod decimals=0 sign=true}}</p>
 				</div>
 				<div class="form-fields">
-					<input type="text" name="system.npcBonus.{{type}}.damage.value" value="{{bonus.damage.value}}" data-dtype="Number" />
-					<p>{{numberFormat bonus.damage.mod decimals=0 sign=true}}</p>
+					<input type="text" name="system.npcBonus.{{type}}.damage.value" value="{{bonus.damage.value}}" data-tooltip="@npcBonus.{{type}}.damage.value" data-dtype="Number" />
+					<p data-tooltip="@npcBonus.{{type}}.damage.mod">{{numberFormat bonus.damage.mod decimals=0 sign=true}}</p>
 				</div>
 			</div>
 			{{/each}}

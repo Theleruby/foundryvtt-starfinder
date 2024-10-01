@@ -112,8 +112,8 @@
                 "AttackDamage": "Attack & Damage",
                 "AttackBonus": "Attack Bonus",
                 "AttackBonusTooltip": "Attack bonus applied to melee and ranged weapon attack rolls for this type of weapon",
-                "DamageBonus": "Damage Bonus (Section 0)",
-                "DamageBonusTooltip": "Damage bonus applied to melee and ranged weapon damage rolls for this type of weapon, applied to the weapon's first damage section"
+                "DamageBonus": "Primary Damage Bonus",
+                "DamageBonusTooltip": "Damage bonus applied to melee and ranged weapon damage rolls for this type of weapon, applied to the weapon's primary damage section"
             },
             "Features": {
                 "Categories": {

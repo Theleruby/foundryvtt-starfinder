@@ -2,14 +2,17 @@
 	<div class="bubble">
 		<h3 class="bubble-header">{{ localize "SFRPG.ActorSheet.Bonuses.AttackDamage" }}</h3>
 		<div class="bubble-info">
-			<div class="form-group">
+			<p>{{ localize "SFRPG.ActorSheet.Bonuses.Desc1" }}</p>
+			<p>{{ localize "SFRPG.ActorSheet.Bonuses.Desc2" }}</p>
+			<p>{{ localize "SFRPG.ActorSheet.Bonuses.Desc3" }}</p>
+			<div class="form-group npc-bonuses-header">
 				<label style="flex:4">
 				</label>
 				<div class="form-fields">
-					<strong data-tooltip="{{ localize "SFRPG.ActorSheet.Bonuses.AttackBonusTooltip" }}">{{ localize "SFRPG.ActorSheet.Bonuses.AttackBonus" }}</strong>
+					<span data-tooltip="{{ localize "SFRPG.ActorSheet.Bonuses.AttackBonusTooltip" }}">{{ localize "SFRPG.ActorSheet.Bonuses.AttackBonus" }}</span>
 				</div>
 				<div class="form-fields">
-					<strong data-tooltip="{{ localize "SFRPG.ActorSheet.Bonuses.DamageBonusTooltip" }}">{{ localize "SFRPG.ActorSheet.Bonuses.DamageBonus" }}</strong>
+					<span data-tooltip="{{ localize "SFRPG.ActorSheet.Bonuses.DamageBonusTooltip" }}">{{ localize "SFRPG.ActorSheet.Bonuses.DamageBonus" }}</span>
 				</div>
 			</div>
 			<hr/>
@@ -29,7 +32,7 @@
 			<hr/>
 			{{#each npcBonus as |bonus type|}}
 			<div class="form-group">
-				<label data-tooltip="{{ localize "SFRPG.ActorSheet.Bonuses.AttackBonusTooltip" }}" style="flex:4">
+				<label style="flex:4">
 					{{bonus.label}}
 				</label>
 				<div class="form-fields">

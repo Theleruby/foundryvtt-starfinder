@@ -1,5 +1,5 @@
 # SFRPG
-This is my personal fork of the Starfinder system definition for Foundry Virtual Tabletop, as used in roleplaying sessions at The Ruby Palace. This version is forked from [foundryvtt-starfinder](https://github.com/foundryvtt-starfinder/foundryvtt-starfinder/) version 0.26.1.
+This is my personal fork of the Starfinder system definition for Foundry Virtual Tabletop, as used in roleplaying sessions at The Ruby Palace. This version is forked from a development build of [foundryvtt-starfinder](https://github.com/foundryvtt-starfinder/foundryvtt-starfinder/) somewhere in-between versions 0.26.1 and 0.27.
 
 ## Compatibility
 
@@ -7,11 +7,16 @@ Foundry v12. This is tested to work correctly on v12.330.
 
 ## Objectives of the fork
 
+The official Starfinder system definition for Foundry appears to be an early alpha version that is largely abandoned (it appears dead for months at a time, gets a flurry of updates, then dies again). I've been finding problems with it continuously - it's extremely buggy, with large swathes of mistakes in the data and many questionable design choices. I'm grateful for the fact that it exists, and for those who have put time into developing it over the years (THANK YOU!), but because of the generally abandoned state of the project, I had no optimism for those issues to get fixed in any prompt amount of time. I also don't like to contribute directly to open-source projects, because in my experience this causes more drama than I can manage.
+
+Consequently, I elected to fork the project so that I could fix the most urgent problems.
+
 ### Short term objectives
 * Bug fixes to the core
 * Corrections to the existing content in the compendium
 * Adding missing content to the compendium
 * Integration of homebrew rules changes into the core (e.g. changing KAC+8 to KAC+4)
+* Adding a custom weapon attack and damage roll bonus system for NPCs
 * Adding hooks for my extension module, [rubicon-sfrpg](https://github.com/theleruby/rubicon-sfrpg/)
 
 ### Long term objectives
@@ -20,11 +25,11 @@ Foundry v12. This is tested to work correctly on v12.330.
 
 ## Current status
 
-This version is now largely frozen for the time being, because our campaign is currently underway, and I don't want to accidentally break everything and disrupt the sessions.
+Development on this fork is slow. I am currently only putting in fixes required for my campaign, as I don't want to accidentally break everything and disrupt the sessions.
 
 ## Support
 
-I don't really intend for anyone else to use this fork, and I don't provide any support for it. My primary priority is just for me and my friends to play Starfinder and to have a good time.
+I don't really intend for anyone else to use this fork, and I don't plan to provide any support for it. My primary priority is just for me and my friends to play Starfinder and to have a good time. I can nevertheless be contacted via Discord (@Theleruby) if you want to discuss this fork with me.
 
 ## How to use the fork
 

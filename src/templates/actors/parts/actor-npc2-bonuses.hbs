@@ -1,0 +1,47 @@
+<div style="padding: 0px 8px;">
+	<div class="bubble">
+		<h3 class="bubble-header">{{ localize "SFRPG.ActorSheet.Bonuses.AttackDamage" }}</h3>
+		<div class="bubble-info">
+			<div class="form-group">
+				<label style="flex:4">
+				</label>
+				<div class="form-fields">
+					<strong data-tooltip="{{ localize "SFRPG.ActorSheet.Bonuses.AttackBonusTooltip" }}">{{ localize "SFRPG.ActorSheet.Bonuses.AttackBonus" }}</strong>
+				</div>
+				<div class="form-fields">
+					<strong data-tooltip="{{ localize "SFRPG.ActorSheet.Bonuses.DamageBonusTooltip" }}">{{ localize "SFRPG.ActorSheet.Bonuses.DamageBonus" }}</strong>
+				</div>
+			</div>
+			<hr/>
+			<div class="form-group">
+				<label style="flex:4">
+					{{ localize "SFRPG.ActorSheet.Bonuses.Base" }}
+				</label>
+				<div class="form-fields">
+					<input type="text" name="system.npcBonus.base.attack.value" value="{{system.npcBonus.base.attack.value}}" data-dtype="Number" />
+					<p>{{numberFormat system.npcBonus.base.attack.mod decimals=0 sign=true}}</p>
+				</div>
+				<div class="form-fields">
+					<input type="text" name="system.npcBonus.base.damage.value" value="{{system.npcBonus.base.damage.value}}" data-dtype="Number" />
+					<p>{{numberFormat system.npcBonus.base.damage.mod decimals=0 sign=true}}</p>
+				</div>
+			</div>
+			<hr/>
+			{{#each npcBonus as |bonus type|}}
+			<div class="form-group">
+				<label data-tooltip="{{ localize "SFRPG.ActorSheet.Bonuses.AttackBonusTooltip" }}" style="flex:4">
+					{{bonus.label}}
+				</label>
+				<div class="form-fields">
+					<input type="text" name="system.npcBonus.{{type}}.attack.value" value="{{bonus.attack.value}}" data-dtype="Number" />
+					<p>{{numberFormat bonus.attack.mod decimals=0 sign=true}}</p>
+				</div>
+				<div class="form-fields">
+					<input type="text" name="system.npcBonus.{{type}}.damage.value" value="{{bonus.damage.value}}" data-dtype="Number" />
+					<p>{{numberFormat bonus.damage.mod decimals=0 sign=true}}</p>
+				</div>
+			</div>
+			{{/each}}
+		</div>
+	</div>
+</div>

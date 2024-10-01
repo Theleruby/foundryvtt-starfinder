@@ -913,6 +913,11 @@ export class ItemSFRPG extends Mix(Item).with(ItemActivationMixin, ItemCapacityM
         if (Number.isNumeric(itemData.attackBonus) && itemData.attackBonus !== 0) parts.push("@item.attackBonus");
         if (abl) parts.push(`@abilities.${abl}.mod`);
         if (["character", "drone"].includes(this.actor.type)) parts.push("@attributes.baseAttackBonus.value");
+        if (this.actor.type === "npc2" && this.type === "weapon") {
+          let npcAttackBonusType = itemData.weaponType;
+          if (!npcAttackBonusType) npcAttackBonusType = "base";
+          parts.push(`@npcBonus.${npcAttackBonusType}.attack.mod`);
+        }
         if (isWeapon) {
             const proficiencyKey = SFRPG.weaponTypeProficiency[this.system.weaponType];
             const proficient = itemData.proficient || this.actor?.system?.traits?.weaponProf?.value?.includes(proficiencyKey);

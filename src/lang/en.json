@@ -107,6 +107,14 @@
                 "Weight": "Weight",
                 "WeightPlaceholder": "e.g. 130 lbs"
             },
+            "Bonuses": {
+                "Base": "Base",
+                "AttackDamage": "Attack & Damage",
+                "AttackBonus": "Attack Bonus",
+                "AttackBonusTooltip": "Additional attack bonus applied to attacks of this type of weapon",
+                "DamageBonus": "Damage Bonus",
+                "DamageBonusTooltip": "Additional damage bonus applied to attacks of this type of weapon"
+            },
             "Features": {
                 "Categories": {
                     "ActiveFeats": "Active Features",
@@ -379,6 +387,7 @@
         "BaseAttackBonusTitle": "Base Attack Bonus",
         "Biography": "Biography",
         "Biotech": "Biotech",
+        "Bonuses": "Bonuses",
         "Browsers": {
             "AlienArchiveBrowser": {
                 "BrowserFilterAlignment": "Filter by Alignment",

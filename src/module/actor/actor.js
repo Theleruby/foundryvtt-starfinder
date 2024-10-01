@@ -73,6 +73,32 @@ export class ActorSFRPG extends Mix(Actor).with(ActorConditionsMixin, ActorCrewM
     }
 
     /**
+       Make sure we have the bonus stuff, it's a hack, but whatever
+     */
+    _ensureNpcBonusDataExists()
+    {
+      if (this.type == 'npc2') {
+        this.system.npcBonus = this.system.npcBonus ?? {}
+        this.system.npcBonus.base = this.system.npcBonus.base ?? {}
+        this.system.npcBonus.base.attack = this.system.npcBonus.base.attack ?? {}
+        this.system.npcBonus.base.attack.value = this.system.npcBonus.base.attack.value ?? 0
+        this.system.npcBonus.base.damage = this.system.npcBonus.base.damage ?? {}
+        this.system.npcBonus.base.damage.value = this.system.npcBonus.base.damage.value ?? 0
+        this.system.npcBonus.base.attack.mod = this.system.npcBonus.base.attack.value
+        this.system.npcBonus.base.damage.mod = this.system.npcBonus.base.damage.value
+        for (const weaponType in CONFIG.SFRPG.weaponTypes) {
+          this.system.npcBonus[weaponType] = this.system.npcBonus[weaponType] ?? {}
+          this.system.npcBonus[weaponType].attack = this.system.npcBonus[weaponType].attack ?? {}
+          this.system.npcBonus[weaponType].attack.value = this.system.npcBonus[weaponType].attack.value ?? 0
+          this.system.npcBonus[weaponType].damage = this.system.npcBonus[weaponType].damage ?? {}
+          this.system.npcBonus[weaponType].damage.value = this.system.npcBonus[weaponType].damage.value ?? 0
+          this.system.npcBonus[weaponType].attack.mod = this.system.npcBonus.base.attack.value + this.system.npcBonus[weaponType].attack.value
+          this.system.npcBonus[weaponType].damage.mod = this.system.npcBonus.base.damage.value + this.system.npcBonus[weaponType].damage.value
+        }
+      }
+    }
+
+    /**
      * Augment the basic actor data with additional dynamic data.
      *
      * @param {Object} actorData The data for the actor
@@ -89,6 +115,9 @@ export class ActorSFRPG extends Mix(Actor).with(ActorConditionsMixin, ActorCrewM
 
         // const timedEffects = SFRPGTimedEffect.getAllTimedEffects(this);
         this.system.timedEffects = new Map();
+
+        // make sure we have the bonus data if this is an NPC actor
+        this._ensureNpcBonusDataExists();
 
         const items = this.items;
         const armors = items.filter(item => item.type === "equipment" && item.system.equipped);

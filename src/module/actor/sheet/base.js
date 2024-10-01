@@ -417,6 +417,11 @@ export class ActorSheetSFRPG extends ActorSheet {
             if (Number.isNumeric(itemData.attackBonus) && itemData.attackBonus !== 0) parts.push("@item.attackBonus");
             if (abl) parts.push(`@abilities.${abl}.mod`);
             if (["character", "drone"].includes(actor.type)) parts.push("@attributes.baseAttackBonus.value");
+            if (actor.type === "npc2" && item.type === "weapon") {
+              let npcAttackBonusType = item.system.weaponType;
+              if (!npcAttackBonusType) npcAttackBonusType = "base";
+              parts.push(`@npcBonus.${npcAttackBonusType}.attack.mod`);
+            }
             if (isWeapon) {
                 const procifiencyKey = SFRPG.weaponTypeProficiency[item.system.weaponType];
                 const proficient = itemData.proficient || actor?.system?.traits?.weaponProf?.value?.includes(procifiencyKey);

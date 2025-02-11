@@ -1,13 +1,13 @@
 {
-  "_id": "y7jCvzzeoZJ5HMeq",
-  "name": "Red Star Plasma Kukri",
+  "_id": "44BfyiSZxYfIETQA",
+  "name": "Plasma Kukri, Blue Star",
   "type": "weapon",
   "_stats": {
     "coreVersion": 12,
     "systemId": "sfrpg",
     "systemVersion": "0.27.0"
   },
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/sfrpg/icons/equipment/weapons/plasma-kukri-blue.webp",
   "system": {
     "type": "",
     "ability": "str",
@@ -63,7 +63,7 @@
             "fusion"
           ],
           "affectsEncumbrance": true,
-          "amount": 4,
+          "amount": 16,
           "subtype": "fusion",
           "weightProperty": "level"
         },
@@ -86,7 +86,7 @@
     "damage": {
       "parts": [
         {
-          "formula": "1d4",
+          "formula": "5d6",
           "operator": "and",
           "types": {
             "electricity": true,
@@ -109,9 +109,9 @@
     "equipped": false,
     "formula": "",
     "identified": true,
-    "level": 4,
+    "level": 16,
     "modifiers": [],
-    "price": 2450,
+    "price": 144000,
     "proficient": true,
     "properties": {
       "aeon": false,

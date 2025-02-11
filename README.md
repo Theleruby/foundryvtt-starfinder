@@ -11,7 +11,7 @@ The official Starfinder system definition for Foundry appears to be an early alp
 
 At the time that I created this fork, the project appeared to be stagnant (it seems to be dead for months at a time, then gets a flurry of updates, then dies again). While I'm grateful for the fact that it exists, and for those who have put time into developing it over the years (THANK YOU!), I had no optimism for those issues to get fixed in any prompt amount of time. I also often have to make near-immediate fixes so that my session is actually playable, and do not have time for those fixes to be reviewed (I can't put my campaign on hold every time there's a bug, which is regularly). On top of this, I don't like to contribute directly to open-source projects, because in my experience this causes more drama than I can manage. I therefore tend to avoid this for mental health reasons.
 
-Consequently, I elected to fork the project myself so that I could fix the most urgent problems.
+Consequently, I elected to fork the project so that I could fix the most urgent problems myself.
 
 Since I made this fork, the project appears to have resumed development (at least for the time being?) so the code is now outdated. When I have time, I intend to merge upstream changes in, but I'm a little busy right now, so this is a low priority for me.
 

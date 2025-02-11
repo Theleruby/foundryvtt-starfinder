@@ -81,6 +81,18 @@
                         {{#each config.weaponCategories as |name key|}}
                             <option value="{{key}}">{{name}}</option>
                         {{/each}}
+                    {{else if (eq modifier.effectType "specific-weapon-property-attacks")}}
+                        {{#each config.weaponTypes as |name key|}}
+                          {{#each ../config.weaponProperties as |pname pkey|}}
+                            <option value="{{key}},{{pkey}}">{{name}} {{pname}}</option>
+                          {{/each}}
+                        {{/each}}
+                    {{else if (eq modifier.effectType "specific-weapon-category-attacks")}}
+                        {{#each config.weaponTypes as |name key|}}
+                          {{#each ../config.weaponCategories as |cname ckey|}}
+                            <option value="{{key}},{{ckey}}">{{name}} {{cname}}</option>
+                          {{/each}}
+                        {{/each}}
                     {{else if (eq modifier.effectType "weapon-damage")}}
                         {{#each config.weaponTypes as |name key|}}
                             <option value="{{key}}">{{name}}</option>
@@ -92,6 +104,18 @@
                     {{else if (eq modifier.effectType "weapon-category-damage")}}
                         {{#each config.weaponCategories as |name key|}}
                             <option value="{{key}}">{{name}}</option>
+                        {{/each}}
+                    {{else if (eq modifier.effectType "specific-weapon-property-damage")}}
+                        {{#each config.weaponTypes as |name key|}}
+                          {{#each ../config.weaponProperties as |pname pkey|}}
+                            <option value="{{key}},{{pkey}}">{{name}} {{pname}}</option>
+                          {{/each}}
+                        {{/each}}
+                    {{else if (eq modifier.effectType "specific-weapon-category-damage")}}
+                        {{#each config.weaponTypes as |name key|}}
+                          {{#each ../config.weaponCategories as |cname ckey|}}
+                            <option value="{{key}},{{ckey}}">{{name}} {{cname}}</option>
+                          {{/each}}
                         {{/each}}
                     {{else if (eq modifier.effectType "specific-speed")}}
                         {{#each config.speeds as |speed key|}}

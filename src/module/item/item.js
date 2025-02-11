@@ -1041,6 +1041,8 @@ export class ItemSFRPG extends Mix(Item).with(ItemActivationMixin, ItemCapacityM
             acceptedModifiers.push(SFRPGEffectType.WEAPON_ATTACKS);
             acceptedModifiers.push(SFRPGEffectType.WEAPON_PROPERTY_ATTACKS);
             acceptedModifiers.push(SFRPGEffectType.WEAPON_CATEGORY_ATTACKS);
+            acceptedModifiers.push(SFRPGEffectType.SPECIFIC_WEAPON_PROPERTY_ATTACKS);
+            acceptedModifiers.push(SFRPGEffectType.SPECIFIC_WEAPON_CATEGORY_ATTACKS);
         }
 
         let modifiers = this.actor.getAllModifiers();
@@ -1065,6 +1067,20 @@ export class ItemSFRPG extends Mix(Item).with(ItemActivationMixin, ItemCapacityM
             } else if (mod.effectType === SFRPGEffectType.WEAPON_CATEGORY_ATTACKS) {
                 if (this.system?.weaponCategory !== mod.valueAffected) {
                     return false;
+                }
+            } else if (mod.effectType === SFRPGEffectType.SPECIFIC_WEAPON_PROPERTY_ATTACKS) {
+                let values = mod.valueAffected.split(",");
+                let valuesType = values[0];
+                let valuesProp = values[1];
+                if (values.length !== 2 || valuesType !== this.system.weaponType || !this.system.properties[valuesProp]) {
+                  return false;
+                }
+            } else if (mod.effectType === SFRPGEffectType.SPECIFIC_WEAPON_CATEGORY_ATTACKS) {
+                let values = mod.valueAffected.split(",");
+                let valuesType = values[0];
+                let valuesCat = values[1];
+                if (values.length !== 2 || valuesType !== this.system.weaponType || this.system.weaponCategory !== valuesCat) {
+                  return false;
                 }
             }
 
@@ -1438,6 +1454,8 @@ export class ItemSFRPG extends Mix(Item).with(ItemActivationMixin, ItemCapacityM
             acceptedModifiers.push(SFRPGEffectType.WEAPON_DAMAGE);
             acceptedModifiers.push(SFRPGEffectType.WEAPON_PROPERTY_DAMAGE);
             acceptedModifiers.push(SFRPGEffectType.WEAPON_CATEGORY_DAMAGE);
+            acceptedModifiers.push(SFRPGEffectType.SPECIFIC_WEAPON_PROPERTY_DAMAGE);
+            acceptedModifiers.push(SFRPGEffectType.SPECIFIC_WEAPON_CATEGORY_DAMAGE);
         }
 
         let modifiers = this.actor.getAllModifiers();
@@ -1463,6 +1481,20 @@ export class ItemSFRPG extends Mix(Item).with(ItemActivationMixin, ItemCapacityM
             } else if (mod.effectType === SFRPGEffectType.WEAPON_CATEGORY_DAMAGE) {
                 if (this.system.weaponCategory !== mod.valueAffected) {
                     return false;
+                }
+            } else if (mod.effectType === SFRPGEffectType.SPECIFIC_WEAPON_PROPERTY_DAMAGE) {
+                let values = mod.valueAffected.split(",");
+                let valuesType = values[0];
+                let valuesProp = values[1];
+                if (values.length !== 2 || valuesType !== this.system.weaponType || !this.system.properties[valuesProp]) {
+                  return false;
+                }
+            } else if (mod.effectType === SFRPGEffectType.SPECIFIC_WEAPON_CATEGORY_DAMAGE) {
+                let values = mod.valueAffected.split(",");
+                let valuesType = values[0];
+                let valuesCat = values[1];
+                if (values.length !== 2 || valuesType !== this.system.weaponType || this.system.weaponCategory !== valuesCat) {
+                  return false;
                 }
             }
             return (mod.enabled || ["formula", "damageSection"].includes(mod.modifierType));

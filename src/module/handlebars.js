@@ -259,5 +259,16 @@ export function setupHandlebars() {
         const formattedValue = formatter.format(value);
         return formattedValue;
     });
-
+    
+    Handlebars.registerHelper('splitByCommaGetLeft', function(value) {
+      let values = value.split(",");
+      if (values.length !== 2) return '';
+      return values[0];
+    });
+    
+    Handlebars.registerHelper('splitByCommaGetRight', function(value) {
+      let values = value.split(",");
+      if (values.length !== 2) return '';
+      return values[1];
+    });
 }

@@ -117,6 +117,30 @@
                             <option value="{{key}},{{ckey}}">{{name}} {{cname}}</option>
                           {{/each}}
                         {{/each}}
+                    {{else if (eq modifier.effectType "weapon-ammo-usage-multiplier")}}
+                        {{#each config.weaponTypes as |name key|}}
+                            <option value="{{key}}">{{name}}</option>
+                        {{/each}}
+                    {{else if (eq modifier.effectType "weapon-property-ammo-usage-multiplier")}}
+                        {{#each config.weaponProperties as |name key|}}
+                            <option value="{{key}}">{{name}}</option>
+                        {{/each}}
+                    {{else if (eq modifier.effectType "weapon-category-ammo-usage-multiplier")}}
+                        {{#each config.weaponCategories as |name key|}}
+                            <option value="{{key}}">{{name}}</option>
+                        {{/each}}
+                    {{else if (eq modifier.effectType "specific-weapon-property-ammo-usage-multiplier")}}
+                        {{#each config.weaponTypes as |name key|}}
+                          {{#each ../config.weaponProperties as |pname pkey|}}
+                            <option value="{{key}},{{pkey}}">{{name}} {{pname}}</option>
+                          {{/each}}
+                        {{/each}}
+                    {{else if (eq modifier.effectType "specific-weapon-category-ammo-usage-multiplier")}}
+                        {{#each config.weaponTypes as |name key|}}
+                          {{#each ../config.weaponCategories as |cname ckey|}}
+                            <option value="{{key}},{{ckey}}">{{name}} {{cname}}</option>
+                          {{/each}}
+                        {{/each}}
                     {{else if (eq modifier.effectType "specific-speed")}}
                         {{#each config.speeds as |speed key|}}
                             <option value="{{key}}">{{speed}}</option>

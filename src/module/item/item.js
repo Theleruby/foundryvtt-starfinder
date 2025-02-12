@@ -1090,19 +1090,104 @@ export class ItemSFRPG extends Mix(Item).with(ItemActivationMixin, ItemCapacityM
         return modifiers;
     }
 
+    getAppropriateAmmoValueModifiers() {
+        const acceptedModifiers = [
+          SFRPGEffectType.AMMO_USAGE_MULTIPLIER,
+          SFRPGEffectType.WEAPON_AMMO_USAGE_MULTIPLIER,
+          SFRPGEffectType.WEAPON_PROPERTY_AMMO_USAGE_MULTIPLIER,
+          SFRPGEffectType.WEAPON_CATEGORY_AMMO_USAGE_MULTIPLIER,
+          SFRPGEffectType.SPECIFIC_WEAPON_PROPERTY_AMMO_USAGE_MULTIPLIER,
+          SFRPGEffectType.SPECIFIC_WEAPON_CATEGORY_AMMO_USAGE_MULTIPLIER
+        ];
+
+        let modifiers = this.actor.getAllModifiers();
+        modifiers = modifiers.filter(mod => {
+            // Remove inactive mods and mods that aren't constant (this is only supporting constant mods right now)
+            if (!mod.enabled || mod.modifierType !== SFRPGModifierType.CONSTANT) return false;
+
+            if (mod.limitTo === "parent" && mod.item !== this) return false;
+            if (mod.limitTo === "container") {
+                const parentItem = getItemContainer(this.actor.items, mod.item);
+                if (parentItem?.id !== this.id) return false;
+            }
+
+            if (mod.effectType === SFRPGEffectType.WEAPON_AMMO_USAGE_MULTIPLIER) {
+                if (mod.valueAffected !== this.system?.weaponType) {
+                    return false;
+                }
+            } else if (mod.effectType === SFRPGEffectType.WEAPON_PROPERTY_AMMO_USAGE_MULTIPLIER) {
+                if (!this.system?.properties?.[mod.valueAffected]) {
+                    return false;
+                }
+            } else if (mod.effectType === SFRPGEffectType.WEAPON_CATEGORY_AMMO_USAGE_MULTIPLIER) {
+                if (this.system?.weaponCategory !== mod.valueAffected) {
+                    return false;
+                }
+            } else if (mod.effectType === SFRPGEffectType.SPECIFIC_WEAPON_PROPERTY_AMMO_USAGE_MULTIPLIER) {
+                let values = mod.valueAffected.split(",");
+                let valuesType = values[0];
+                let valuesProp = values[1];
+                if (values.length !== 2 || valuesType !== this.system.weaponType || !this.system.properties[valuesProp]) {
+                  return false;
+                }
+            } else if (mod.effectType === SFRPGEffectType.SPECIFIC_WEAPON_CATEGORY_AMMO_USAGE_MULTIPLIER) {
+                let values = mod.valueAffected.split(",");
+                let valuesType = values[0];
+                let valuesCat = values[1];
+                if (values.length !== 2 || valuesType !== this.system.weaponType || this.system.weaponCategory !== valuesCat) {
+                  return false;
+                }
+            }
+
+            return acceptedModifiers.includes(mod.effectType);
+        });
+
+        return modifiers;
+    }
+
+    getAdjustedAmmoUsage(value) {
+      let modifiers = this.getAppropriateAmmoValueModifiers();
+      const stackModifiers = new StackModifiers();
+      modifiers = stackModifiers.process(modifiers, null, {actor: this.actor});
+      let multiplier = 1.0;
+      let modsToProcess = [];
+      for (const [modType, modValue] of Object.entries(modifiers)) {
+        if ([SFRPGModifierTypes.CIRCUMSTANCE, SFRPGModifierTypes.UNTYPED].includes(modType)) {
+          for (const bonus of modValue) {
+            modsToProcess.push(bonus);
+          }
+        }
+        else if (modValue !== null) {
+          modsToProcess.push(modValue);
+        }
+      }
+      let data = this.actor.getRollData() ?? {};
+      for (const mod of modsToProcess) {
+        let computedBonus = 1;
+        try {
+            const roll = Roll.create(mod.modifier.toString(), data).evaluateSync({strict: false});
+            computedBonus = roll.total;
+        } catch {}
+        multiplier = multiplier * computedBonus;
+      }
+      let computedValue = Math.round(value * multiplier);
+      return computedValue < 0 ? 0 : computedValue;
+    }
+
     consumeCapacityFromUsage() {
         const itemData = foundry.utils.deepClone(this.system);
         if (itemData.hasOwnProperty("usage")) {
             const usage = itemData.usage;
             if (usage.per) {
+                const value = this.getAdjustedAmmoUsage(usage.value);
                 if (["round", "shot"].includes(usage.per)) {
-                    this.consumeCapacity(usage.value);
+                    this.consumeCapacity(value);
                 } else if (['minute'].includes(usage.per)) {
                     if (game.combat) {
                         Hooks.callAll("consumeCapacityMinute", {
                             actor: this.actor,
                             item: this,
-                            value: usage.value
+                            value: value
                         })
                     } else {
                         ui.notifications.info("You currently cannot deduct ammunition from weapons with a usage per minute outside of combat.");

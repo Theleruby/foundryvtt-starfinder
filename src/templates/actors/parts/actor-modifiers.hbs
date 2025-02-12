@@ -132,6 +132,16 @@
                             {{lookup ../../config.weaponTypes (splitByCommaGetLeft modifier.valueAffected)}} {{lookup ../../config.weaponProperties (splitByCommaGetRight modifier.valueAffected)}}
                         {{else if (eq modifier.effectType "specific-weapon-category-damage")}}
                             {{lookup ../../config.weaponTypes (splitByCommaGetLeft modifier.valueAffected)}} {{lookup ../../config.weaponCategories (splitByCommaGetRight modifier.valueAffected)}}
+                        {{else if (eq modifier.effectType "weapon-ammo-usage-multiplier")}}
+                            {{lookup ../../config.weaponTypes modifier.valueAffected}}
+                        {{else if (eq modifier.effectType "weapon-property-ammo-usage-multiplier")}}
+                            {{lookup ../../config.weaponProperties modifier.valueAffected}}
+                        {{else if (eq modifier.effectType "weapon-category-ammo-usage-multiplier")}}
+                            {{lookup ../../config.weaponCategories modifier.valueAffected}}
+                        {{else if (eq modifier.effectType "specific-weapon-property-ammo-usage-multiplier")}}
+                            {{lookup ../../config.weaponTypes (splitByCommaGetLeft modifier.valueAffected)}} {{lookup ../../config.weaponProperties (splitByCommaGetRight modifier.valueAffected)}}
+                        {{else if (eq modifier.effectType "specific-weapon-category-ammo-usage-multiplier")}}
+                            {{lookup ../../config.weaponTypes (splitByCommaGetLeft modifier.valueAffected)}} {{lookup ../../config.weaponCategories (splitByCommaGetRight modifier.valueAffected)}}
                         {{else if (eq modifier.effectType "specific-speed")}}
                             {{lookup ../../config.speeds modifier.valueAffected}}
                         {{else if (eq modifier.effectType "actor-resource")}}

@@ -63,9 +63,9 @@
                     {{else if (eq modifier.effectType "weapon-category-attacks")}}
                         {{lookup ../config.weaponCategories modifier.valueAffected}}
                     {{else if (eq modifier.effectType "specific-weapon-property-attacks")}}
-                        {{lookup ../config.weaponTypes (splitByCommaGetLeft modifier.valueAffected)}} {{lookup ../config.weaponProperties (splitByCommaGetRight modifier.valueAffected)}}
+                        {{lookup ../config.weaponTypes (splitByCommaGetLeft modifier.valueAffected)}} + {{lookup ../config.weaponProperties (splitByCommaGetRight modifier.valueAffected)}}
                     {{else if (eq modifier.effectType "specific-weapon-category-attacks")}}
-                        {{lookup ../config.weaponTypes (splitByCommaGetLeft modifier.valueAffected)}} {{lookup ../config.weaponCategories (splitByCommaGetRight modifier.valueAffected)}}
+                        {{lookup ../config.weaponTypes (splitByCommaGetLeft modifier.valueAffected)}} + {{lookup ../config.weaponCategories (splitByCommaGetRight modifier.valueAffected)}}
                     {{else if (eq modifier.effectType "weapon-damage")}}
                         {{lookup ../config.weaponTypes modifier.valueAffected}}
                     {{else if (eq modifier.effectType "weapon-property-damage")}}
@@ -73,9 +73,9 @@
                     {{else if (eq modifier.effectType "weapon-category-damage")}}
                         {{lookup ../config.weaponCategories modifier.valueAffected}}
                     {{else if (eq modifier.effectType "specific-weapon-property-damage")}}
-                        {{lookup ../config.weaponTypes (splitByCommaGetLeft modifier.valueAffected)}} {{lookup ../config.weaponProperties (splitByCommaGetRight modifier.valueAffected)}}
+                        {{lookup ../config.weaponTypes (splitByCommaGetLeft modifier.valueAffected)}} + {{lookup ../config.weaponProperties (splitByCommaGetRight modifier.valueAffected)}}
                     {{else if (eq modifier.effectType "specific-weapon-category-damage")}}
-                        {{lookup ../config.weaponTypes (splitByCommaGetLeft modifier.valueAffected)}} {{lookup ../config.weaponCategories (splitByCommaGetRight modifier.valueAffected)}}
+                        {{lookup ../config.weaponTypes (splitByCommaGetLeft modifier.valueAffected)}} + {{lookup ../config.weaponCategories (splitByCommaGetRight modifier.valueAffected)}}
                     {{else if (eq modifier.effectType "weapon-ammo-usage-multiplier")}}
                         {{lookup ../config.weaponTypes modifier.valueAffected}}
                     {{else if (eq modifier.effectType "weapon-property-ammo-usage-multiplier")}}
@@ -83,9 +83,9 @@
                     {{else if (eq modifier.effectType "weapon-category-ammo-usage-multiplier")}}
                         {{lookup ../config.weaponCategories modifier.valueAffected}}
                     {{else if (eq modifier.effectType "specific-weapon-property-ammo-usage-multiplier")}}
-                        {{lookup ../config.weaponTypes (splitByCommaGetLeft modifier.valueAffected)}} {{lookup ../config.weaponProperties (splitByCommaGetRight modifier.valueAffected)}}
+                        {{lookup ../config.weaponTypes (splitByCommaGetLeft modifier.valueAffected)}} + {{lookup ../config.weaponProperties (splitByCommaGetRight modifier.valueAffected)}}
                     {{else if (eq modifier.effectType "specific-weapon-category-ammo-usage-multiplier")}}
-                        {{lookup ../config.weaponTypes (splitByCommaGetLeft modifier.valueAffected)}} {{lookup ../config.weaponCategories (splitByCommaGetRight modifier.valueAffected)}}
+                        {{lookup ../config.weaponTypes (splitByCommaGetLeft modifier.valueAffected)}} + {{lookup ../config.weaponCategories (splitByCommaGetRight modifier.valueAffected)}}
                     {{else if (eq modifier.effectType "specific-speed")}}
                         {{lookup ../config.speeds modifier.valueAffected}}
                     {{else if (eq modifier.effectType "actor-resource")}}

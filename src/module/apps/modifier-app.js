@@ -23,7 +23,7 @@ export default class SFRPGModifierApplication extends FormApplication {
         return foundry.utils.mergeObject(options, {
             classes: ["sfrpg", "modifier-app"],
             template: "systems/sfrpg/templates/apps/modifier-app.hbs",
-            width: 560,
+            width: 580,
             height: "auto",
             closeOnSubmit: true
         });

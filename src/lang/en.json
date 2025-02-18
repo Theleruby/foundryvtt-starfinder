@@ -114,9 +114,13 @@
                 "Base": "Base",
                 "DamageBonus": "Primary Damage Bonus",
                 "DamageBonusTooltip": "Damage bonus applied to melee and ranged weapon damage rolls for this type of weapon's primary damage section",
-                "Desc1": "Bonuses configured in this section will apply to melee and ranged weapon attacks made directly with weapons. They apply to both natural and equipment weapons, but not to spells, feats or armor. You can configure these bonuses if you want to avoid having to modify weapon items that you later want to drop as loot.",
-                "Desc2": "The base value will be added to each of the type-specific weapon bonuses, resulting in a combined modifier.",
-                "Desc3": "It is strongly advised that if you specify a base primary damage bonus, you apply an inverse modifier to grenades so that they have a combined damage bonus of +0 (as grenades shouldn't usually qualify for a damage bonus)."
+                "Desc1": "Bonuses configured in this section will apply to most weapon attacks and weapon damage rolls. They apply to both natural and equippable weapons, as well as other equipment with a weapon (such as power armor), but not to spells or feats. You can configure these bonuses if you want to avoid having to modify weapon items that you later want to drop as loot.",
+                "Desc2": "The base value will be added to each of the other configured values to create a combined modifier. The standard value works similarly, but only gets added to the modifiers for weapons that can be used in standard combat (melee weapons, ranged weapons and armor).",
+                "Desc3": "The gunnery attack bonus is treated like a player's BAB for calculating gunnery attack rolls (if the number of piloting ranks is greater, it will be used instead).",
+                "Desc4": "Note that the damage of gunnery and grenade weapons isn't typically impacted by the creature using the weapon, so the damage bonuses of these weapons are not configurable here (they get overridden to 0).",
+                "Equipment": "Equipment",
+                "Gunnery": "Gunnery",
+                "Standard": "Standard"
             },
             "Features": {
                 "Categories": {

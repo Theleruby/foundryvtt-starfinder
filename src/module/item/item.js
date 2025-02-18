@@ -913,9 +913,9 @@ export class ItemSFRPG extends Mix(Item).with(ItemActivationMixin, ItemCapacityM
         if (Number.isNumeric(itemData.attackBonus) && itemData.attackBonus !== 0) parts.push("@item.attackBonus");
         if (abl) parts.push(`@abilities.${abl}.mod`);
         if (["character", "drone"].includes(this.actor.type)) parts.push("@attributes.baseAttackBonus.value");
-        if (this.actor.type === "npc2" && this.type === "weapon") {
+        if (this.actor.type === "npc2" && ["weapon", "equipment"].includes(this.type)) {
           let npcAttackBonusType = itemData.weaponType;
-          if (!npcAttackBonusType) npcAttackBonusType = "base";
+          if (!npcAttackBonusType) npcAttackBonusType = this.type == "equipment" ? "equipment" : "standard";
           parts.push(`@npcBonus.${npcAttackBonusType}.attack.mod`);
         }
         if (isWeapon) {
@@ -1240,7 +1240,7 @@ export class ItemSFRPG extends Mix(Item).with(ItemActivationMixin, ItemCapacityM
         } else if (this.system.weaponType === "ecm") { // If the weapon is an ECM weapon and not an NPC, use Computers ranks + Int (NPC ECM weapons still use gunnery)
             parts = ["@scienceOfficer.skills.com.ranks", "@scienceOfficer.abilities.int.mod"];
         } else { // If not an ECM weapon and not an NPC, use BAB/Piloting + Dex
-            parts = ["max(@gunner.attributes.baseAttackBonus.value, @gunner.skills.pil.ranks)", "@gunner.abilities.dex.mod"];
+            parts = ["max(@gunner.attributes.baseAttackBonus.value, @gunner.npcBonus.gunnery.attack.mod, @gunner.skills.pil.ranks)", "@gunner.abilities.dex.mod"];
         }
         const title = game.settings.get('sfrpg', 'useCustomChatCards') ? game.i18n.format("SFRPG.Rolls.AttackRoll") : game.i18n.format("SFRPG.Rolls.AttackRollFull", {name: this.name});
 
@@ -1401,11 +1401,11 @@ export class ItemSFRPG extends Mix(Item).with(ItemActivationMixin, ItemCapacityM
         }
 
         // Add NPC damage bonus to primary damage section
-        if (this.actor.type === "npc2" && this.type === "weapon" && ["mwak", "rwak"].includes(itemData.actionType)) {
+        if (this.actor.type === "npc2" && ["equipment", "weapon"].includes(this.type) && ["mwak", "rwak"].includes(itemData.actionType)) {
           for (const part of parts) {
             if (part.isPrimarySection) {
               let npcDamageBonusType = itemData.weaponType;
-              if (!npcDamageBonusType) npcDamageBonusType = "base";
+              if (!npcDamageBonusType) npcDamageBonusType = this.type == "equipment" ? "equipment" : "standard";
               part.formula = part.formula + ` + @npcBonus.${npcDamageBonusType}.damage.mod`;
             }
           }
